@@ -1,0 +1,31 @@
+#prevent_error_dont_delete{
+	font-family: verdana;
+}
+
+body,
+.side-body{min-width: 300px;}
+.print-header{
+	display: none;
+}
+
+.form-group .btn,
+.form-group .form-control{margin:2px;}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+     border-top: 10px solid lime;
+ 	border-bottom: 10px solid lime;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media only screen and (max-device-width: 768px) {
+	.form-group label{display: block;}
+}
