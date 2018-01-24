@@ -10,6 +10,12 @@ Features:
 5. Multiple account supported (public user account, private account such as students, instructor, staff)
 6. Excel export report
 
+Make this folder writable
+
+assets  - the public folder for css and js script
+uploads - the folder for uploaded file (best to move this folder away your public root directory and edit the upload_folder location in index.php)
+
+
 
 
 demo
