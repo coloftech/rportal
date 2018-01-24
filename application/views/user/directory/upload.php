@@ -1,9 +1,9 @@
 
-        <link href="//roy-dell/rportal/assets/plugin/summernote/summernote.css" rel="stylesheet">
-        <link href="//roy-dell/rportal/assets/plugin/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet">
+        <link href="<?=base_url();?>assets/plugin/summernote/summernote.css" rel="stylesheet">
+        <link href="<?=base_url();?>assets/plugin/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet">
         
-        <script src="//roy-dell/rportal/assets/plugin/bootstrap-tagsinput/dist/bootstrap-tagsinput.js" type="text/javascript"></script>
-        <script src="//roy-dell/rportal/assets/plugin/summernote/summernote.js" type="text/javascript"></script>
+        <script src="<?=base_url();?>assets/plugin/bootstrap-tagsinput/dist/bootstrap-tagsinput.js" type="text/javascript"></script>
+        <script src="<?=base_url();?>assets/plugin/summernote/summernote.js" type="text/javascript"></script>
         <style type="text/css">
   
 ul.ul-on-input{
