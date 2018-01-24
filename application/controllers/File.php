@@ -481,15 +481,15 @@ public function update_abstract($value='')
 
             $dirname = $this->username;
 
-			$target_dir = "uploads/files/" . $dirname . "/";
+			$target_dir = UPLOADPATH . $dirname . "/";
 			if (!file_exists($target_dir)) {
-               	mkdir("uploads/files/".$dirname,0777);
+               	mkdir(UPLOADPATH.$dirname,0777);
 			} 
             $dirname2 = $this->username.'/'.$type;
-			$target_dir2 = "uploads/files/" . $dirname2 . "/";
+			$target_dir2 = UPLOADPATH . $dirname2 . "/";
 
 			if (!file_exists($target_dir2)) {
-               	mkdir("uploads/files/".$dirname2,0777);
+               	mkdir(UPLOADPATH.$dirname2,0777);
 			} 
                 
                 $filename = basename($_FILES[$file]["name"][$i]);
