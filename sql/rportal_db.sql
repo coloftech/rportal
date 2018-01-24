@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2018 at 12:18 PM
+-- Generation Time: Jan 24, 2018 at 02:32 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -321,6 +321,26 @@ INSERT INTO `col_roles` (`id`, `role_name`) VALUES
 (27, 'principal'),
 (28, 'brother'),
 (29, 'sister');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `col_settings`
+--
+
+CREATE TABLE `col_settings` (
+  `id` int(11) NOT NULL,
+  `setting_name` varchar(50) NOT NULL,
+  `setting_value` text NOT NULL,
+  `setting_setting_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `col_settings`
+--
+
+INSERT INTO `col_settings` (`id`, `setting_name`, `setting_value`, `setting_setting_id`) VALUES
+(1, 'welcome', '<b>MISSION\r\n</b><p></p><div>\r\n</div><div>BISU is committed to provide quality higher Education in the arts and Sciences, as well as in the professional and Technological fields. undertake Research and Development, and extension services for the sustainable development of Bohol and the Country.\r\n</div><div><b>\r\n</b></div><div><b><br></b></div><div><b>VISION</b></div><div><b><br></b></div><div><b>\r\n</b></div><div>\r\n</div><div>A Premier Science and Technology University for the formation of a world class and Virtues human resource for sustenable development in Bohol and the Country.\r\n</div><div>\r\n</div><div><b><br></b></div><div><b>GOAL</b></div><div><b><br></b></div><div><b>\r\n</b></div><div>\r\n</div><div>1. Pursue faculty and education excellence and strengthen the current viable curricular programs and develop curricular programs that are responsive to the demands of the times both in the industry and the environment.\r\n</div><div>\r\n</div><div>2. Promote quality research outputs that respond to the needs of the local and national communities.\r\n</div><div>\r\n</div><div>3. Develop Communities through Responsive Extension Programs.\r\n</div><div>\r\n</div><div>4. Adopt Efficient and Profitable Income Generating Projects/Enterprise for Self sustainability.\r\n</div><div>\r\n</div><div>5. Provide adequate, self-of-the-art and accessible infrastructure support facilities for quality education.\r\n</div><div>\r\n</div><div>6. Promote efficient and effective good governance supportive of high quality education.</div>', 0);
 
 -- --------------------------------------------------------
 
@@ -695,6 +715,12 @@ ALTER TABLE `col_roles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `col_settings`
+--
+ALTER TABLE `col_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `more_group_type`
 --
 ALTER TABLE `more_group_type`
@@ -831,6 +857,11 @@ ALTER TABLE `col_names`
 --
 ALTER TABLE `col_roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+--
+-- AUTO_INCREMENT for table `col_settings`
+--
+ALTER TABLE `col_settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `more_group_type`
 --

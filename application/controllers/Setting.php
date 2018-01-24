@@ -20,11 +20,33 @@ class Setting extends CI_Controller
         	redirect();
         }
         $this->uid = $this->session->userdata('id');
+        $this->load->model('setting_m');
 
 	}
 	public function index($value='')
 	{
+
+		$data['welcome'] = $this->setting_m->get_all_setting(1);
+
+
+
+		$data['title']= "Resource Portal - user access";
+		$this->load->view('admin/default/header',$data);
+		$this->load->view('admin/default/menu',$data);
+		$this->load->view('admin/setting/site',$data);
+		$this->load->view('admin/default/footer',$data);
+	}
+	public function update_welcome($value='')
+	{
 		# code...
+		if ($this->input->post()) {
+			# code...
+			$input = (object)$this->input->post();
+			$data = array('setting_value' => $input->desc);
+			$update = $this->setting_m->save($input->s_id,$data);
+			redirect('setting?stats='.$update);
+			exit();
+		}
 	}
 	public function user_access($value='')
 	{

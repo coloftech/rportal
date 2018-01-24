@@ -28,15 +28,13 @@ class Home extends CI_Controller
 		$this->load->model('group_m');
 		$this->load->model('post_m');
         $this->load->library("slug");
+        $this->load->model('setting_m');
         $this->load->model('user_model');
 	}
 	public function index($value='')
 	{
 		$data['title'] = 'Research Hub';
-		$data['content'] = '<h2>Welcome to BISU BILAR Research Hub</h2>
-
-<label>MISSION</label><br />
-BISU is committed to provide quality higher Education in the arts and Sciences, as well as in the professional and Technological fields. undertake Research and Development, and extension services for the sustainable development of Bohol and the Country.';
+		$data['welcome'] = $this->setting_m->get_all_setting(1);
 		$data['username'] = $this->session->username;
 		$data['visits'] = $this->pagecounter->visit_total($this->pagecounter->get_pageUrl());
 		$this->load->view('common/header',$data);
