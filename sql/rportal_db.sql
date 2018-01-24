@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2018 at 07:55 PM
+-- Generation Time: Jan 24, 2018 at 12:18 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -182,7 +182,7 @@ CREATE TABLE `aauth_users` (
 --
 
 INSERT INTO `aauth_users` (`id`, `email`, `pass`, `username`, `fname`, `mname`, `lname`, `stud_id`, `stud_id_ex`, `banned`, `last_login`, `last_activity`, `date_created`, `forgot_exp`, `remember_time`, `remember_exp`, `verification_code`, `totp_secret`, `ip_address`, `isdeleted`) VALUES
-(1, 'admin123456@gmail.com', 'ec225039f1cb0c48ad528709e8e0184991e637d96db175f094b6b2037ec1a3c2', 'admin', 'r', 't', 'g', '1', '', 0, '2018-01-21 01:55:26', '2018-01-21 01:55:26', NULL, NULL, NULL, NULL, NULL, NULL, 'fe80::fc1d:efca:2bb6:3c4', 0);
+(1, 'admin123456@gmail.com', '3783a5063e48003fd64eb62d2f06125430b4d63e62aeda455564932654079c80', 'admin', 'r', 't', 'g', '1', '', 0, '2018-01-21 01:55:26', '2018-01-21 01:55:26', NULL, NULL, NULL, NULL, NULL, NULL, 'fe80::fc1d:efca:2bb6:3c4', 0);
 
 -- --------------------------------------------------------
 

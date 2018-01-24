@@ -32,10 +32,14 @@
                                     
                                   <li><a href="<?php echo site_url(); ?>/user/directory">My directory</a></li>
                                   <?php endif ?>
+                          <li><a href="<?=site_url('setting/security');?>"> <span>My account</span></a></li>
+                         
                           <?php if ($this->session->userdata['permit'] == 'staffs' || $this->aauth->is_admin()): ?>
                             
                           <li><a href="<?=site_url('dashboard');?>"> <span>Administration</span></a></li>
                           <?php endif ?>
+                     
+                          
                      
                           
                      

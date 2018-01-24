@@ -74,6 +74,10 @@ $route['(:any)'] = 'home/$1';
 $route['(:any)/(:any)'] = 'home/$1/$2';
 */
 
+$route['setting/(:any)/(:any)'] = 'setting/$1/$2';
+$route['setting/(:any)'] = 'setting/$1';
+$route['setting'] = 'setting';
+
 $route['pdf/(:any)/(:any)'] = 'Fpdf_test/$1/$2';
 $route['pdf/(:any)'] = 'Fpdf_test/$1';
 $route['pdf'] = 'Fpdf_test';
