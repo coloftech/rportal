@@ -13,6 +13,6 @@ Features:
 
 
 demo
-
+website: //www.coloftech.com/hub/index.php
 username: admin
 password: admin
