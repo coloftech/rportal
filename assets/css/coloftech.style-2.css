@@ -3,7 +3,6 @@ html{
 }
 body{
 	background-color: #fff;
-	min-height: 100vh;
 }
 .home-title{
 	background: green;
@@ -12,8 +11,6 @@ body{
 	text-decoration: none;
 }
 .home-title .header-title a > h4{
-padding:1px 11px;font-size: 30px;color: #fff;
-text-decoration: none;
 }
 .navbar-inverse{
 
@@ -86,6 +83,23 @@ text-decoration: none;
 
 .search-form .btn{display: inline-block;}
 
+
+#slideshow .nav a small
+{
+    display: block;
+}
+#slideshow .nav
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+.nav-pills>li[data-slide-to="0"].active a { background-color: #16a085; }
+.nav-pills>li[data-slide-to="1"].active a { background-color: #e67e22; }
+.nav-pills>li[data-slide-to="2"].active a { background-color: #2980b9; }
+.nav-pills>li[data-slide-to="3"].active a { background-color: #8e44ad; }
 .loader {
     border: 10px solid #f3f3f3; /* Light grey */
     border-top: 10px solid #3498db; /* Blue */
@@ -97,10 +111,21 @@ text-decoration: none;
  	border-bottom: 10px solid lime;
 }
 
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+footer {
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+}
 @media only screen and (max-width: 768px) {
+
+#slideshow {display: none;}
 
 }

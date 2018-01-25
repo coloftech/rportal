@@ -12,11 +12,31 @@
         <link href="<?=base_url('assets/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
         <link href="<?=base_url('assets/bootstrap');?>/css/font-awesome.css" rel="stylesheet">
         <link href="<?=base_url('assets/css/animate.css');?>" rel="stylesheet">
-        <link href="<?=base_url('assets/plugin/videoplayer/video-js.min.css');?>" rel="stylesheet">
+    <?php 
+    if (isset($home)) {
+       # code...
+      echo '
+
+        <link href="<?=base_url(\'assets/bootstrap/css/bootstrap.min.css\');?>" rel="stylesheet">
+        <link href="<?=base_url(\'assets/bootstrap\');?>/css/font-awesome.css" rel="stylesheet">
+        <link href="<?=base_url(\'assets/css/animate.css\');?>" rel="stylesheet">
+        ';
+     } else{
+        # code...
+      echo '
+
+        <link href="<?=base_url(\'assets/bootstrap/css/bootstrap.min.css\');?>" rel="stylesheet">
+        <link href="<?=base_url(\'assets/bootstrap\');?>/css/font-awesome.css" rel="stylesheet">
+        <link href="<?=base_url(\'assets/css/animate.css\');?>" rel="stylesheet">
+        <link href="<?=base_url(\'assets/plugin/videoplayer/video-js.min.css\');?>" rel="stylesheet">
+        ';
+     }
+
+     ?>
        
 
         <?php // add css files
-        $this->minify->css(array('coloftech.style-2.css'));
+        $this->minify->css(array('default/home.css'));
         echo $this->minify->deploy_css();
         ?>
 
@@ -32,18 +52,27 @@
         
 </head>
 <body>
-<div class="wrapper  home-title">
-    <div class="row">
 
-      <div class="col-md-12" id="search-top-menu">
-          <div class="container header-title">
-            <a href="<?=site_url();?>"><img  style='width:50px;height:50px;display:inline-block;margin:10px;' src="<?=base_url();?>public/images/logob.png"><h1 style="display:inline-block;color:#fff;"><?=isset($header) ? $header : 'Research Hub';?></h1></a>
+
+<header class="wrapper">
+  <div class="container brand_logo">
+    
+          <div class="col-md-1">
+                
+            <img  style='width:50px;height:50px;display:inline-block;margin:10px;' src="<?=base_url();?>public/images/logob.png">
+         
           </div>
-          <div class="container">
-          	<?php include 'menu.php'; ?>
+          <div class="col-md-11">
+              <h2 style='color:white'>
+                Resource Portal
+                </h2>
+              </div>
           </div>
 
-        </div>              
-      </div>
-    </div> <!-- div row -->
-</div><!-- div wrapper -->
+  </div>
+  <div class="container brand_menu">
+    
+            <?php include 'menu.php'; ?>
+  </div>
+</header>
+

@@ -17,6 +17,13 @@ class Setting_m extends CI_Model
 		$query = $this->db->get_where('col_settings',array('id'=>$id));
 		return $query->result();
 	}
+	public function get_active_setting($id=0)
+	{
+		# code...
+		$this->db->select('*');
+		$query = $this->db->get_where('col_settings',array('id'=>$id,'setting_status'=>1));
+		return $query->result();
+	}
 	public function save($id=0,$data)
 	{
 		# code...

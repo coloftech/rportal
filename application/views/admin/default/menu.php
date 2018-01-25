@@ -95,6 +95,22 @@
                     </div>
                 </div>
             </li>
+            <!-- Dropdown-->
+            <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-setting">
+                    <span class="fa fa-gears"></span> Settings<span class="caret"></span>
+                </a>
+
+                <!-- Dropdown level 1 -->
+                <div id="dropdown-setting" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                            <li class=''><a href="<?=site_url('setting');?>">Site setting</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </li>
 
      
             <li><a href="<?=site_url('user');?>"><span class="fa fa-sign-in"></span> User panel</a></li>
